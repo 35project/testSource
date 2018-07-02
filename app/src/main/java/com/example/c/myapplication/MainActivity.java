@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,13 +37,41 @@ public class MainActivity extends AppCompatActivity {
     private List<RowData> createDataset() {
 
         List<RowData> dataset = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 20; i++) {
             RowData data = new RowData();
-            data.setTitle("カサレアル　太郎" + i + "号");
-            data.setDetail("カサレアル　太郎は" + i + "個の唐揚げが好き");
+            data.setBody("TodoList No " + i);
+
 
             dataset.add(data);
         }
         return dataset;
     }
+
+    public void changeToEditRow(View view){
+
+        LinearLayout layout = (LinearLayout)findViewById(R.id.plain_list);
+
+        layout.removeView(view);
+
+
+        LinearLayout li = findViewById(R.id.editable_list);
+
+
+        getLayoutInflater().inflate(R.layout.edit_row, layout);
+
+    }
+
+
+    public void changeToPlainRow(View view){
+
+        LinearLayout layout = (LinearLayout)findViewById(R.id.editable_list);
+
+        layout.removeView(view);
+
+        getLayoutInflater().inflate(R.layout.edit_row, layout);
+
+
+    }
+
+
 }

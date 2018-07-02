@@ -22,15 +22,15 @@ public class CasarealRecycleViewAdapter extends RecyclerView.Adapter<CasarealVie
 
     @Override
     public CasarealViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.row, parent,false);
+        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.plain_row, parent,false);
         CasarealViewHolder vh = new CasarealViewHolder(inflate);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(CasarealViewHolder holder, int position) {
-        holder.titleView.setText(list.get(position).getTitle());
-        holder.detailView.setText(list.get(position).getDetail());
+        holder.bodyView.setText(list.get(position).getBody());
+
     }
 
     @Override

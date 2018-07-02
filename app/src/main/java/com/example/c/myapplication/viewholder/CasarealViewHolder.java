@@ -6,14 +6,13 @@ import android.widget.TextView;
 
 import com.example.c.myapplication.R;
 
-
 public class CasarealViewHolder extends RecyclerView.ViewHolder {
-    public TextView titleView;
-    public TextView detailView;
+    public TextView bodyView;
+
     public CasarealViewHolder(View itemView) {
         super(itemView);
-        titleView = (TextView) itemView.findViewById(R.id.title);
-        detailView = (TextView) itemView.findViewById(R.id.detail);
+
+        bodyView = (TextView) itemView.findViewById(R.id.body);
 
     }
 }
