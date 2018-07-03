@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:clickable="true"
+            android:inputType="text"
             android:onClick="changeToPlainRow" />
 
     </android.support.design.widget.TextInputLayout>
