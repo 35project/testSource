@@ -12,7 +12,7 @@ public class CasarealViewHolder extends RecyclerView.ViewHolder {
     public CasarealViewHolder(View itemView) {
         super(itemView);
 
-        bodyView = (TextView) itemView.findViewById(R.id.body);
+        bodyView = (TextView) itemView.findViewById(R.id.plain_row);
 
     }
 }
